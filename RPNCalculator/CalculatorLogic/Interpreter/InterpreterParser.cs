@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace RPNCalculator.CalculatorLogic.Interpreter
 {
+    //Parser class, implementing the Interpreter Pattern. Used for interpreting the Program which is entered from the user
     public class InterpreterParser
     {
         Stack<IExpression> ExpressionStack = new Stack<IExpression>();

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPNCalculator.CalculatorLogic.Interpreter
 {
+    //Terminal expression encapsulating decimal number
     public class NumberExpression : IExpression
     {
         public double Value { get; set; }

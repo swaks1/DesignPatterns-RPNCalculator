@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace RPNCalculator.CalculatorLogic.States
 {
+    //A state where user enters number of register which will be loaded in the calculator
     public class RecallState : IState
     {
         CalculatorFramework Framework { get; set; }

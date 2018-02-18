@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPNCalculator.CalculatorLogic.ExecutionLogic
 {
+    //OperatorStack class whcih wraps Stac<Operand> and modifies the Pop method..If the stack is empty it returns 0
     public class OperandStack 
     {
         public Stack<Operand> MainStack { get; set; }

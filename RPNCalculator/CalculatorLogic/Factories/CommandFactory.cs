@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace RPNCalculator.CalculatorLogic.Factories
 {
+    //Class implementing the Factory Pattern and the Singlton pattern.. Used for createing differnet kinds of Commands used in the system
     public class CommandFactory
     {
         private static CommandFactory Instance = null;

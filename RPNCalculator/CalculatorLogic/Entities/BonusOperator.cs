@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPNCalculator.CalculatorLogic.Entities
 {
+    //Class that describes the bonus operators (sin, cos,tan,inv,angle)
     public class BonusOperator : Component
     {
         public CalcBonusFunctions Value { get; set; }

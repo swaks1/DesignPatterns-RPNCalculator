@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace RPNCalculator.CalculatorLogic.ExecutionLogic
 {
+    //Invoker class whcih controls the undo redo stacks, and also knows when to execute the command
     public class Invoker
     {
         private static Stack<CommandWithMemento> UndoStack = new Stack<CommandWithMemento>();

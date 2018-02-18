@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace RPNCalculator.CalculatorLogic.States
 {
+    //Main state thath manages the Calculations requestet by the User.. Communicates with the Framework to get the input form the user, as well 
+    //give the output of the requests.. The functionality is made by using Strategy pattern where the requests are encapsulated in Commands
+    // which are delegated to Invoker who executes them on the Reciever
     public class CalculationState : IState
     {
         CalculatorFramework Framework { get; set; }

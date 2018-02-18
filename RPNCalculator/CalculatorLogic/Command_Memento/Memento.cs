@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPNCalculator.CalculatorLogic.ExecutionLogic
 {
-    
+    //Memento object storing the state of the Calculator
     public class Memento
     {
         private Calculator state;

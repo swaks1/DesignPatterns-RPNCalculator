@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 
 namespace RPNCalculator.CalculatorLogic
 {
+    //A class that controls the subsystems that make up the calculator funcitonality. It is kind of Facade pattern, since 
+    //the UI interface talks with this class delegating the requests.
     public class CalculatorFramework
     {
 
@@ -31,11 +33,13 @@ namespace RPNCalculator.CalculatorLogic
             CurrentState = new CalculationState(this);
         }
 
+        //this functions are called from the UI and than delgated to the State object, which controls the logic of system
 
         public void OperandClicked(int num)
         {
             CurrentState.OperandClicked(num);
         }
+
         public void OperatorClicked(CalcOperation calcOperaiton)
         {
             CurrentState.OperatorClicked(calcOperaiton);
@@ -56,12 +60,14 @@ namespace RPNCalculator.CalculatorLogic
             CurrentState.BonusFunctionClicked(calcBonusFunction);
         }
 
+        //mehtod that is used to trigger event so the UI knows to refresh
         public void TriggerRefreshUI(string message)
         {
             EventMessage eventMessage = new EventMessage { Message = message };
             RefreshUI(this, eventMessage);
         }
 
+        // Methods that are called from the UI class which expose the internal state of the calculator
         public string GetSavedProgram()
         {
             return SavedProgram;

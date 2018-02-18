@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPNCalculator.CalculatorLogic
 {
+    //Enums used through the program
     public enum CalcOperation
     {
         ADD,

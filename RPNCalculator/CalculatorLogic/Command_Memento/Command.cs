@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPNCalculator.CalculatorLogic.ExecutionLogic
 {
+    //Basic command encapsulating the request from the user.. when executed saves memento from the Reciever (Calculator) and executes the Action
     public class Command
     {
         public Calculator Subject { get; set; }

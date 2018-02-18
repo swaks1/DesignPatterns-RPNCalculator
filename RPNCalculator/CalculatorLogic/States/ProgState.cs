@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace RPNCalculator.CalculatorLogic.States
 {
+    //A state where the user inserts some program which will be saved for latter execution
     public class ProgState : IState
     {
         CalculatorFramework Framework { get; set; }

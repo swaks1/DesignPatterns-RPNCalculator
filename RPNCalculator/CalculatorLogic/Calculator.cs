@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace RPNCalculator.CalculatorLogic
 {
-    
+    //this class is the Reciever in the Command-Memento pattern. It represents the calculator with it's internal stack,
+    //registers and info about Inverse and Rad states. This class has specifies the functions and operations that the 
+    //calculator can do.
     public class Calculator
     {
         public OperandStack OperandStack { get; set; }

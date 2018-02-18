@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace RPNCalculator.CalculatorLogic.States
 {
+    //Transient state whcih executes the saved program from the user...than transfers the control to Calculation State
     public class ExeState : IState
     {
         CalculatorFramework Framework { get; set; }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPNCalculator.CalculatorLogic.Interpreter
 {
+    //base abstract expression
     public interface IExpression
     {
         double Interpret();

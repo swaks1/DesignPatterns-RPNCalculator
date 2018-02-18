@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace RPNCalculator.CalculatorLogic.States
 {
+    //State in which the user saves some input in the registers..
     public class StorageState : IState
     {
         CalculatorFramework Framework { get; set; }

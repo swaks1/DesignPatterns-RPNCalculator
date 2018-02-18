@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPNCalculator.CalculatorLogic.ExecutionLogic
 {
+    //wrapper class used for UNDO REDO stacks
     public class CommandWithMemento
     {
         public Command Command { get; set; }

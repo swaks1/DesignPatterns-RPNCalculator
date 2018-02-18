@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPNCalculator.CalculatorLogic.Strategies
 {
+    //Desctibes the basic interface to be a strategy
     public interface IStrategy
     {
         void ExecuteStrategy();

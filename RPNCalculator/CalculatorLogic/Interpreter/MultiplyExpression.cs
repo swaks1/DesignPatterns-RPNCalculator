@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPNCalculator.CalculatorLogic.Interpreter
 {
+    //Nonterminal expression describing how to multiply two terminal expressions
     public class MultiplyExpression : IExpression
     {
         IExpression FirstExpression;

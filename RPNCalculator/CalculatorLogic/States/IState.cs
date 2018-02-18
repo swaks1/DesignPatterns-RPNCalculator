@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPNCalculator.CalculatorLogic.States
 {
+    //Abstract state specifying what operations a state must implement
     public interface IState
     {
         void OperandClicked(int num);

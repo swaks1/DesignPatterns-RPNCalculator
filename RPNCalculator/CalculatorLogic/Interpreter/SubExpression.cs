@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPNCalculator.CalculatorLogic.Interpreter
 {
+    //Nonterminal expression describing how to subtract two terminal expressions
     public class SubExpression : IExpression
     {
         IExpression FirstExpression;

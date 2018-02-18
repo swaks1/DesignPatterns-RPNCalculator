@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPNCalculator.CalculatorLogic.Interpreter
 {
+    //Nonterminal expression describing how to add two terminal expressions
     public class AddExpression : IExpression
     {
         IExpression FirstExpression;

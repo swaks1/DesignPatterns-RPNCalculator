@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPNCalculator.CalculatorLogic
 {
+    //class used for the operators ( + - / * ..etc)
     public class Operator : Component
     {
         public CalcOperation Value { get; set; }
