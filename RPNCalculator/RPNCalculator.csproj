@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FCE542BB-B594-44B6-9B94-38420F22B28E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RPNCalculator</RootNamespace>
+    <AssemblyName>RPNCalculator</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CalculatorLogic\Calculator.cs" />
+    <Compile Include="CalculatorLogic\CalculatorFramework.cs" />
+    <Compile Include="CalculatorLogic\Entities\BonusOperator.cs" />
+    <Compile Include="CalculatorLogic\Entities\EventMessage.cs" />
+    <Compile Include="CalculatorLogic\Enums\CalcEnums.cs" />
+    <Compile Include="CalculatorLogic\Command_Memento\OperatorStack.cs" />
+    <Compile Include="CalculatorLogic\Command_Memento\Command.cs" />
+    <Compile Include="CalculatorLogic\Command_Memento\CommandWithMemento.cs" />
+    <Compile Include="CalculatorLogic\Command_Memento\Invoker.cs" />
+    <Compile Include="CalculatorLogic\Command_Memento\Memento.cs" />
+    <Compile Include="CalculatorLogic\Factories\CommandFactory.cs" />
+    <Compile Include="CalculatorLogic\Entities\Component.cs" />
+    <Compile Include="CalculatorLogic\Entities\Operand.cs" />
+    <Compile Include="CalculatorLogic\Entities\Operator.cs" />
+    <Compile Include="CalculatorLogic\Interpreter\IExpression.cs" />
+    <Compile Include="CalculatorLogic\Interpreter\AddExpression.cs" />
+    <Compile Include="CalculatorLogic\Interpreter\InterpreterParser.cs" />
+    <Compile Include="CalculatorLogic\Interpreter\SubExpression.cs" />
+    <Compile Include="CalculatorLogic\Interpreter\DivideExpression.cs" />
+    <Compile Include="CalculatorLogic\Interpreter\MultiplyExpression.cs" />
+    <Compile Include="CalculatorLogic\Interpreter\NumberExpression.cs" />
+    <Compile Include="CalculatorLogic\States\ProgState.cs" />
+    <Compile Include="CalculatorLogic\States\ExeState.cs" />
+    <Compile Include="CalculatorLogic\States\RecallState.cs" />
+    <Compile Include="CalculatorLogic\States\StorageState.cs" />
+    <Compile Include="CalculatorLogic\States\CalculationState.cs" />
+    <Compile Include="CalculatorLogic\States\IState.cs" />
+    <Compile Include="CalculatorLogic\Strategies\SwapStrategy.cs" />
+    <Compile Include="CalculatorLogic\Strategies\DropStrategy.cs" />
+    <Compile Include="CalculatorLogic\Strategies\ChangeSignStrategy.cs" />
+    <Compile Include="CalculatorLogic\Strategies\DivStrategy.cs" />
+    <Compile Include="CalculatorLogic\Strategies\EnterStrategy.cs" />
+    <Compile Include="CalculatorLogic\Strategies\MulStrategy.cs" />
+    <Compile Include="CalculatorLogic\Strategies\SubStrategy.cs" />
+    <Compile Include="CalculatorLogic\Strategies\AddStrategy.cs" />
+    <Compile Include="CalculatorLogic\Strategies\IStrategy.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
